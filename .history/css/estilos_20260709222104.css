@@ -1,0 +1,480 @@
+:root {
+    --color-principal: #37086d;
+    --color-secundario: #501c81;
+    --color-texto: #222;
+    --color-texto-suave: #666;
+    --color-fondo: #ffffff;
+    --color-superficie: #ffffff;
+    --color-borde: #8b5cf6;
+
+    --espacio:20px;
+    --sombra:0 5px 15px rgba(0,0,0,.08);
+
+    --transition:0.3s ease;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    font-family:system-ui,sans-serif;
+    background:var(--color-fondo);
+    color:var(--color-texto);
+    line-height:1.6;
+    transition:var(--transition);
+}
+
+
+section{
+    scroll-margin-top:80px;
+}
+
+
+/* ================= HEADER ================= */
+
+
+header{
+
+    position:sticky;
+    top:0;
+    z-index:100;
+
+    background:var(--color-superficie);
+    border-bottom:1px solid var(--color-borde);
+
+    padding:12px 20px;
+
+    box-shadow:var(--sombra);
+
+}
+
+
+.contenedor{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+.logo{
+
+    color:var(--color-texto);
+    text-decoration:none;
+    font-size:2rem;
+    font-weight:bold;
+
+}
+
+
+/* BOTON LUNA */
+
+#btn-tema{
+
+    background:none;
+    border:0;
+    cursor:pointer;
+
+    color:var(--color-texto);
+
+    font-size:1.3rem;
+}
+
+
+
+/* MENU */
+
+
+nav{
+
+    display:flex;
+    align-items:center;
+}
+
+
+#menu-btn{
+
+    background:transparent;
+
+    border:2px solid var(--color-borde);
+
+    color:var(--color-texto);
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+.nav-links{
+
+    display:none;
+
+    list-style:none;
+
+    gap:25px;
+
+}
+
+
+.nav-links.abierto{
+
+    display:flex;
+
+}
+
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:var(--color-texto);
+
+    transition:.3s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:var(--color-principal);
+
+}
+
+
+@media(min-width:1024px){
+
+    #menu-btn{
+        display:none;
+    }
+
+
+    .nav-links{
+
+        display:flex;
+
+    }
+
+}
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    position:relative;
+
+}
+
+
+.hero-left,
+.hero-right{
+
+    width:50%;
+    overflow:hidden;
+
+}
+
+
+.hero img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(40%);
+
+}
+
+
+.hero-text{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.hero-text h1{
+
+    font-size:4rem;
+
+}
+
+
+.btn{
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    border:2px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+}
+
+
+
+/* ================= DISCOGRAFIA ================= */
+
+
+#Discografia{
+
+    padding:80px 0;
+
+    background:#ebe8ec;
+
+}
+
+
+.album-grid{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:35px;
+
+}
+
+
+.album{
+
+    text-align:center;
+
+}
+
+
+.album img{
+
+    width:100%;
+
+    border-radius:12px;
+
+}
+
+
+/* ================= EXPERIENCIA ================= */
+
+
+.ExperienciaCV{
+
+    padding:80px 0;
+
+    background:#f5f5f5;
+
+}
+
+
+.trabajo{
+
+    width:90%;
+    max-width:900px;
+
+    margin:25px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-left:6px solid var(--color-principal);
+
+    border-radius:8px;
+
+}
+
+
+
+/* ================= CONTACTO ================= */
+
+
+#contacto{
+
+    padding:60px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    background:white;
+
+}
+
+
+#contacto form{
+
+    width:100%;
+
+    max-width:500px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+input,
+textarea{
+
+    padding:10px;
+
+}
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    background:#1a1a1a;
+
+    color:white;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+
+footer ul{
+
+    list-style:none;
+
+}
+
+
+footer li{
+
+    display:inline-block;
+
+    margin:10px;
+
+}
+
+
+footer svg{
+
+    vertical-align:middle;
+
+}
+
+
+
+/* ================= MODO OSCURO ================= */
+
+
+body.oscuro{
+
+    --color-fondo:#121212;
+
+    --color-superficie:#1e1e1e;
+
+    --color-texto:#eeeeee;
+
+}
+
+
+body.oscuro #Discografia{
+
+    background:#0f0f0f;
+
+}
+
+
+body.oscuro .ExperienciaCV{
+
+    background:#1a1a1a;
+
+}
+
+
+body.oscuro .trabajo{
+
+    background:#222;
+
+    color:white;
+
+}
+
+
+body.oscuro #contacto{
+
+    background:#121212;
+
+}
+
+
+body.oscuro #contacto form{
+
+    background:#1e1e1e;
+
+    padding:25px;
+
+    border-radius:12px;
+
+}
+
+
+body.oscuro input,
+body.oscuro textarea{
+
+    background:#2a2a2a;
+
+    color:white;
+
+}
+
+
+body.oscuro .nav-links{
+
+    background:#121212;
+
+}

@@ -96,28 +96,6 @@ header {
     transform: scale(0.95);
 }
 
-/* Hover suave en los puntos */
-#puntos-earl,
-#puntos-penetration,
-#puntos-gravitation,
-#puntos-adultswing,
-#puntos-Alb4,
-#puntos-una-lagrima,
-#puntos-flower-of-eternity {
-    transition: color 0.3s ease;
-}
-
-.album:hover #puntos-earl,
-.album:hover #puntos-penetration,
-.album:hover #puntos-gravitation,
-.album:hover #puntos-adultswing,
-.album:hover #puntos-Alb4,
-.album:hover #puntos-una-lagrima,
-.album:hover #puntos-flower-of-eternity {
-    color: var(--color-principal);
-    font-weight: bold;
-}
-
 .btn {
     display: inline-block;
     padding: 14px 32px;
